@@ -1,0 +1,1 @@
+document.getElementById("fuka").value;
