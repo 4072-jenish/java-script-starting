@@ -15,5 +15,5 @@ if(y >= 100 && y <= 500 ){
 }else{
     console.log("Y is not reachable :");   
 }
-
+ 
 
