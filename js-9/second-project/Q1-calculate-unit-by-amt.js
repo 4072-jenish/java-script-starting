@@ -26,7 +26,7 @@ if(unit >= 50){
     console.log("Bill is : ", total);
 }else {
     console.log("Invalid Enter : ");   
-}
+} 
 
 
 /*
