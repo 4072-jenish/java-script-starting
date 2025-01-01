@@ -2,20 +2,23 @@
 
 console.log("Q1 print the array in diffrent way :");
 
+let mycolor = ["Red", "Green", "White", "Black" ];
 
-let color = ["red","green","white","black"];
+let output1 = mycolor.join(",");
+console.log("output-1:", output1);
 
-console.log(color);
-console.log(color.join(","));
-console.log(color.join("+"));
-console.log(color.splice(0,3));
-color.splice(3,1);
-console.log(color);
+let output2 = mycolor.join("+");
+console.log("output-2:", output2);
 
-console.log(color.slice(1,3));
- color.push("orenge")
- console.log(color);
- 
+let output3 = mycolor.slice(0, -1).join(",");
+console.log("output-3:", output3);
 
+let output4 = mycolor[0];
+console.log("output-4:", output4);
 
+let output5 = mycolor.slice(1, 3).join(",");
+console.log("output-5:", output5);
 
+let orange = [mycolor, "Orange"];
+let output6 = orange.join(",");
+console.log("output-6:", output6);
