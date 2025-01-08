@@ -3,8 +3,9 @@ body{
 }
 section{
     display: flex;
+    margin: 0 auto;
+    justify-content: center;
     margin-top: 300px;
-    margin-left: 300px;
 }
 section button{
     margin: 20px;
@@ -24,9 +25,30 @@ section button:hover{
 .slider{
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 .slider img{
      width: 500px;
      height: 300px;
      margin: 0 50px;
+     border-radius: 10px;
+     transition: opacity 1s ease-in-out;
+     opacity: 1;
+ }
+
+
+.slyder{
+    display: flex;
+    align-items: center;
+}
+
+.countainer{
+
+          
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+    padding-left: 100px;
+    padding-right: 100px;
+    
 }
