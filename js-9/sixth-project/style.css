@@ -1,0 +1,32 @@
+body{
+    background-color: rgba(44, 0, 61, 0.219);
+}
+section{
+    display: flex;
+    margin-top: 300px;
+    margin-left: 300px;
+}
+section button{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: darkslategrey;
+    color: #fff;
+    box-shadow: 5px 2px 5px #000;
+    transition: 0.5s;
+}
+section button:hover{
+    box-shadow: none;
+    background-color: #027497;
+    color: #000;
+}
+.slider{
+    display: flex;
+    flex-direction: column;
+}
+.slider img{
+     width: 500px;
+     height: 300px;
+     margin: 0 50px;
+}
