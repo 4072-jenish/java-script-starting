@@ -1,0 +1,32 @@
+
+.calculator{
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+a{
+    display: inline;
+    text-decoration: none;
+    color: black;
+}
+ul{  
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: burlywood;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    justify-content: center;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #000;
+}
