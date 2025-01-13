@@ -3,35 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Professional Contact Form with Errors</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: #ffffff;
+            width: 400px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #4CAF50;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 8px;
+            display: block;
+            text-align: left;
+        }
+
+        /* Input Fields */
+        input[type="text"], input[type="email"], input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #4CAF50;
+            background-color: #e6f7e6;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Error Messages */
+        .error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .error.hidden {
+            display: none;
+        }
+
+        /* Success Message */
+        .success {
+            color: #2ecc71;
+            font-size: 16px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .form-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
-    <div class="calculator">
-        <ul>
-            <li><a href="javascript:void(0)">7</a></li>
-            <li><a href="javascript:void(0)">8</a></li>
-            <li><a href="javascript:void(0)">9</a></li>
-            <li><a href="javascript:void(0)">/</a></li>
-            <li><a href="javascript:void(0)">4</a></li>
-            <li><a href="javascript:void(0)">5</a></li>
-            <li><a href="javascript:void(0)">6</a></li>
-            <li><a href="javascript:void(0)">*</a></li>
-            <li><a href="javascript:void(0)">1</a></li>
-            <li><a href="javascript:void(0)">2</a></li>
-            <li><a href="javascript:void(0)">3</a></li>
-            <li><a href="javascript:void(0)">+</a></li>
-            <li><a href="javascript:void(0)">0</a></li>
-            <li><a href="javascript:void(0)">.</a></li>
-            <li><a href="javascript:void(0)">-</a></li>
-            <li><a href="javascript:void(0)">=</a></li>
-        </ul>
-    </div>
-    
 
+<div class="form-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name">
+        <div id="nameError" class="error hidden"></div>
 
-    <script src="cal.js"></script>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <div id="emailError" class="error hidden"></div>
+
+        <input type="submit" value="Submit">
+        <div id="successMessage" class="success">Your form has been submitted successfully!</div>
+    </form>
+</div>
+
+<script>
+// Intentional JavaScript errors for debugging
+
+// Error #1: Attempt to access 'name' and 'email' outside the function
+name = document.getElementById('name').value; // This should be inside the validateForm function
+
+// Error #2: Incorrect onsubmit function call, validateForm() is called immediately
+document.getElementById('contactForm').onsubmit = validateForm(); // Should be validateForm without parentheses
+
+// Error #3: Missing return statement to prevent form submission on error
+function validateForm() {
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let isValid = true;  // Flag to track form validity
+
+    // Name Validation (Error #4: Incorrect validation logic, missing empty check)
+    if (name === "") {
+        document.getElementById('nameError').innerText = "Name is required!";
+        document.getElementById('nameError').classList.remove('hidden');
+        isValid = false;
+    } else {
+        document.getElementById('nameError').classList.add('hidden');
+    }
+
+    // Email Validation (Error #5: Missing email format validation)
+    if (email === "") {
+        document.getElementById('emailError').innerText = "Email is required!";
+        document.getElementById('emailError').classList.remove('hidden');
+        isValid = false;
+    } else if (!validateEmail(email)) { // Simple email format validation (Error #6: Missing validation function)
+        document.getElementById('emailError').innerText = "Please enter a valid email address!";
+        document.getElementById('emailError').classList.remove('hidden');
+        isValid = false;
+    } else {
+        document.getElementById('emailError').classList.add('hidden');
+    }
+
+    // If form is not valid, prevent form submission
+    if (!isValid) {
+        return false;
+    }
+
+    // Show success message
+    document.getElementById('successMessage').style.display = 'block';
+    return false; // Prevent form submission for demo purpose
+}
+
+// Email validation function (Error #7: Missing this function)
+function validateEmail(email) {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
+}
+</script>
 
 </body>
 </html>
