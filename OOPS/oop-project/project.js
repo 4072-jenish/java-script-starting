@@ -30,7 +30,7 @@ object.student(sname,email,cantnum);
 object.faculty(fname,femail,fcantnum);
 
 console.log("---------------------------------------------------------------------------------------------------");
-
+ 
 
 console.log("Q2 Get a detailes of employee and print them : ");
 
