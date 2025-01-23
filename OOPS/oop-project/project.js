@@ -83,7 +83,3 @@ let area = new shape();
 
 area.circale(7);
 area.rect(12 , 11);
-
-
-
-
