@@ -27,10 +27,10 @@ function loaddata(id) {
     const imageElement = document.getElementById("image");
     imageElement.style.opacity = 0;
 
-    setTimeout(() => {
+    setInterval(() => {
         imageElement.setAttribute('src', quotes[id].image);
         imageElement.style.opacity = 1;
-    }, 500);
+    }, 5000);
 }
 
 loaddata(index);
