@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="add-product" id="form">
+        <h2>Add New Product</h2>
+        <form id="addProduct">
+            <table>
+                <tr>
+                    <td><label>Product Name:</label></td>
+                    <td><input type="text" id="pname" placeholder="Enter Product Name"></td>
+                </tr>
+                <tr>
+                    <td><label>Description for product :</label></td>
+                    <td><input type="text" id="pdisc" placeholder="Description..."></td>
+                </tr>
+                <tr>
+                    <td><label>Product Image:</label></td>
+                    <td><input type="text" id="pimage" placeholder="Enter ProductImage adress"></td>
+                </tr>
+                <tr>
+                    <td><label>Prise :</label></td>
+                    <td><input type="text" id="pprise" placeholder="Enter Prise of product"></td>
+                </tr>
+                <tr>
+                    <td><label>(optional) Product code No: </label></td>
+                    <td><input type="text" id="pcode" placeholder="Enter Product code"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input class="btn" type="submit" value="Add Product" /></td>
+                  </tr>
+            </table>
+        </form>
+    </div>
+
+
+
+
+
+    <div id="view-products" >
+        <div class="card col-4">
+            <div class="card-image">
+                <img/>
+            </div>
+            <div class="card-content">
+                <h1></h1>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+       
+    </div>
+    
+    
+    <script src="project-script.js"></script>
+</body>
+</html>

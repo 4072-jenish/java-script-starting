@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add_To_Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+        <div class="container" id="Product_card">
+            <div class="card">
+                <h3>Add New Product :</h3>
+                <form id="ProductForm">
+                    <div class="form-group">
+                        <label>Product Image :</label>
+                        <input type="text" id="Product_image" placeholder="Enter product image URL" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Product Name:</label>
+                        <input type="text" id="Product_name" placeholder="Enter product name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description:</label>
+                        <input type="text" id="Description" placeholder="Enter product details" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Price:</label>
+                        <input type="text" id="Price" placeholder="Enter product price" required>
+                    </div>
+                    <button class="submit-btn" type="submit">Add Product</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="cont col-12">
+            <div class="product-card col-4">
+                <div class="product-image">
+                    <div class="Product-delete">
+                       <img/>
+                    </div>
+                    <img />
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title"></h2>
+                    <p class="product-description"></p>
+                    <div class="product-price-row">
+                        <p class="product-price"></p>
+                        <button class="product-btn"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+   
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

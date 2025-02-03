@@ -1,0 +1,128 @@
+*,
+*::after,
+*::before
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: 'satoshi-medium', sans-serif;
+    display: block;
+    overflow-x: hidden;
+    background-image: url(https://www.shutterstock.com/image-photo/empty-top-wooden-table-supermarket-260nw-1536047243.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    position: relative;
+}
+.col-4{width: 33.33%; padding-left: 12px;padding-right: 12px;}
+
+
+.container {
+    
+    height: 100%;
+    max-width: 1235px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.add-product{
+    width: 100%;
+    height: 100%;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+#addProduct table tr td label{
+    margin-right: 30px;
+}
+#addProduct table tr td input{
+    border-radius: 10px ;
+    padding: 10px;
+}
+#addProduct{
+    padding: 50px;
+    background-color: #ffbe5c;
+    border-radius: 10px;
+}
+#addProduct table{
+    
+}
+h2{
+    padding: 20px;
+
+}
+td{
+    padding: 5px;
+    font-size: 20px;
+}
+.btn{
+    padding: 10px;
+    background-color: #000000; 
+    border: none; 
+    color: white; 
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+#view-products{
+    background-color: #ffbe5c;
+    border-radius: 20px;
+}
+
+#view-products table{
+    padding: 50px;
+    margin: auto;
+}
+
+#view-products tr{
+    text-align: center;
+    margin: 0 auto;
+}
+
+#view-products td{
+    padding: 20px;
+    font-size: 16px;
+    width: 300px;
+    overflow: x scroll;
+    border-bottom: 2px #000;
+}
+
+#viewData tr td button{
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: #B18129;
+    transition: 0.3s;
+    border: 2PX solid rgba(0, 0, 0, 0);
+}
+#viewData tr td button:hover {
+    border: 2px solid #000                  ;
+    background-color: #F4EFDC;
+
+}
+
+#view-products{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #000;
+    padding: 10px;
+}
+
