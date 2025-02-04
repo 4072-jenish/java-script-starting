@@ -93,21 +93,48 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     width: 100%;
-    height: 600px;
     overflow-x: hidden;
+    background-image: url(https://i0.wp.com/picjumbo.com/wp-content/uploads/natural-background-with-wooden-pedestal-for-product-photography-free-image.jpeg?w=2210&quality=70);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .container {
-    background: #ffffff;
+ 
     padding: 20px 40px 20px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 500px;
     margin:  40px auto;
+    
+    background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
   }
   .container h3 {
     text-align: start;
     margin-top: 10px;
     margin-bottom: 20px;
+    color: #fff;
+    font-size: 30px;
+  }
+
+  a{
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    margin: 50px;
+    right: 0;
+    position: absolute;    
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
+    padding: 8px 10px;
+    border-radius: 2px;
+    border: none;
+    transition: 0.3s;
+  }
+  a:hover{
+    background-color: #fff;
+    color: #000;
   }
 
 .card{
@@ -121,12 +148,13 @@ body {
   .form-group {
     margin-bottom: 15px;
     display:flex ;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #fff;
     left: 0;
   }
   .form-group input[type="text"],
@@ -152,7 +180,7 @@ body {
     width: 105%;
     padding: 10px;
     border: none;
-    background: #ff0000;
+    background: #29bafd;
     color: #ffffff;
     border-radius: 4px;
     cursor: pointer;
@@ -167,27 +195,31 @@ body {
   }
   .submit-btn:hover {
     background: #fff;
-    color: #ff0000;
+    color: #003e5a;
   }
 
   .cont{
-     display: flex;
-     flex-wrap: wrap;
-     transition: 0.3s;
-     transform: translateY(-20px);
-}
-
-  .cont:hover{
-    transform: translateY(0);
+    display: flex;
+    flex-wrap: wrap;
   }
 
-.product-card {
+  
+  .product-card {
     max-width: 280px;
     margin: 80px 20px 0px 20px;
-    background-color: rgb(196, 227, 253);
     border-radius: 20px;
-    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);  
+  }
+  .product-card{
+     transition: 0.3s;
+     transform: translateY(0px);
 }
+
+  .product-card:hover{
+    transform: translateY(10px);
+    box-shadow: none;
+  }
 
 .product-image {
     height: 250px;
@@ -203,32 +235,24 @@ body {
     object-fit: cover;
 }
 
-.Product-delete{
-  padding: 7px 8px 4px 8px; 
-  border-radius: 100px;
-  background-color: rgba(255, 255, 255, 0.603);
-  position: absolute;
-  right: 0;
-  margin: 5px 5px 0px 0px ;
-
-}
 
 
 .product-info {
     padding: 20px;
 }
 
-.product-title {
+.product-title{
+  color: #fff;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: var(--text-color);
 }
 
 .product-description {
     font-size: 15px;
-    color: #666;
+    color: #ffffff;
     margin-bottom: 20px;
+    overflow-x: hidden;
 }
 
 .product-price-row {
@@ -239,11 +263,12 @@ body {
 
 .product-price {
     font-size: 16px;  
-    color: var(--primary-color);
+    color: #fff;
+    overflow-y: hidden;
 }
 
 .product-btn{
-    background-color:#ff0000;
+    background-color:#29bafd;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -255,7 +280,7 @@ body {
 
 .product-btn:hover{
     background-color: #fff;
-    color: #ff0000;
+    color: #003e5a;
 }
 
 

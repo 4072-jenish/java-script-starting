@@ -26,11 +26,11 @@ function loadData() {
     let allData = JSON.parse(localStorage.getItem("Product")) || [];
 
     let result = "";
-    allData.forEach((record, index) => {
+    allData.forEach((record) => {
         let row = `
             <div class="product-card">
-           <div>
-                 <h2 class="product-info">${record.Product_name}</h2>
+           <div class="product-info">
+                 <h2 class="product-title">${record.Product_name}</h2>
            </div>
                 <div class="product-image">
                     <img src="${record.Product_image}" alt="${record.Product_name}" width="100">
@@ -49,15 +49,29 @@ function loadData() {
     });
 
     document.querySelector(".cont").innerHTML = result;
+
+    document.querySelectorAll(".product-btn").forEach((addBtn,index) => {
+            addBtn.addEventListener("click",() => addtocart(index))
+    });
 }
 
-function deleteProduct(index) {
+function addtocart(index){
     let products = JSON.parse(localStorage.getItem("Product")) || [];
+    let cartProduct = JSON.parse(localStorage.getItem("cartProduct")) || [];
 
-    products.splice(index, 1);
+    let selectProduct= products[index];
+    cartProduct.push(selectProduct);
 
-    localStorage.setItem("Product", JSON.stringify(products));
-    loadData();
+    localStorage.setItem("Product", JSON.stringify(cartProduct));
+
+    alert("yes")
+
 }
+
+
+
+
+
+
 
 loadData();
