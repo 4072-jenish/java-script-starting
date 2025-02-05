@@ -59,19 +59,12 @@ function addtocart(index){
     let products = JSON.parse(localStorage.getItem("Product")) || [];
     let cartProduct = JSON.parse(localStorage.getItem("cartProduct")) || [];
 
-    let selectProduct= products[index];
+    let selectProduct = products[index];
     cartProduct.push(selectProduct);
 
-    localStorage.setItem("Product", JSON.stringify(cartProduct));
+    localStorage.setItem("cartProduct", JSON.stringify(cartProduct));
 
-    alert("yes")
 
 }
-
-
-
-
-
-
 
 loadData();
