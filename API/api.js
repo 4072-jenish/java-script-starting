@@ -31,9 +31,13 @@ document.getElementById('bredd-btn').addEventListener("Click", ()=> {
         
         data.message.forEach((item) => {
             let image=document.createElement('img');
-            image.setAttribute('src',item)
-            image.style.height = "200px"
+            image.setAttribute('src',item);
+            image.style.height = "200px";
+            image.style.width = "200px";
+            image.style.margin = "10px";
+            images.append(image);
         })
 
-    });
+    })
+    .catch(err => console.log(err));
 });
