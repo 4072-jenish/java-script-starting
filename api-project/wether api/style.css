@@ -1,0 +1,37 @@
+
+body{
+    background-image: url(https://i0.wp.com/angelatravels.com/wp-content/uploads/2019/01/43920623172_7443b1e368_b.jpg?fit=1024%2C683&ssl=1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.search{
+    margin-top: 50px;
+}
+
+.weather-content{
+    margin-top: 50px;
+}
+#search{
+    border-radius: 10px;
+    border: none;
+    padding: 5px 10px;
+    transition: 0.3s ease-in-out;
+}
+#search:hover{
+    background-color: #CB7D3A;
+    color: #fff;
+}
+.card{
+    background: transparent;
+    backdrop-filter: blur(5px);
+    display: inline-block;
+    color: aliceblue;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+tr{
+    padding: 10px 0;
+}
