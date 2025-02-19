@@ -1,5 +1,5 @@
 
-const targetDate = new Date("2025-02-01T23:59:59");
+const targetDate = new Date("2025-12-01T23:59:59");
 
 function Countdown() {
     const currentDate = new Date();
