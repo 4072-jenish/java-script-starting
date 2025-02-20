@@ -2,7 +2,6 @@
 document.querySelector("#btn").addEventListener("click" , () => {
     let moviename = document.querySelector("#movieName")
     let moviedtaile = document.querySelector("#movieDetaile");
-    moviedtaile.innerHTML = " "
 
     fetch(`https://www.omdbapi.com/?i=${moviename.value}&apikey=7272da2c`)
     .then(res => res.json())

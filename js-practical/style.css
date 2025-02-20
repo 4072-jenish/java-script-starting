@@ -37,7 +37,7 @@ body{
     margin-left: 12px;
     margin-right: 12px;
 }
-.countainer{
+.container{
     
     margin-left: auto;
     margin-right: auto;
@@ -46,3 +46,22 @@ body{
     padding-right: 100px;
     
 }
+
+.search-bar{
+    margin-top: 50px;
+}
+
+.search-bar input{
+    padding:  8px 10px ;
+    border-radius: 10px;
+    background-color: #025d81;
+    border: none;
+    color: aliceblue;
+}
+.search-bar button{
+    padding: 8px 10px ;
+    border-radius: 10px;
+    border: none;
+    background-color: #62edff;
+}
+
