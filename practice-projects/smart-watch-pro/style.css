@@ -1,0 +1,44 @@
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+.watch-box {
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    background: radial-gradient(circle, #ffffff, #e0e0e0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 3px solid #007BFF;
+}
+.watch-screen {
+    color: #007BFF;
+    text-align: center;
+}
+.clock-time {
+    font-size: 2.8em;
+    margin: 0;
+    font-weight: bold;
+}
+.clock-date {
+    font-size: 1.2em;
+    color: #555;
+}
+.watch-control {
+    position: absolute;
+    bottom: 20px;
+    width: 60px;
+    height: 12px;
+    border-radius: 10px;
+    background: #007BFF;
+    box-shadow: 0 0 10px #007BFF;
+}
