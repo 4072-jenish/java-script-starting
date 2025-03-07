@@ -4,6 +4,7 @@ console.log(" Q1 WAP for array data sorting desending order using selection sort
 
 
 arr = [90,40, 20, 10, 50, 60, 70, 80, 30, 100];
+console.log("Before sorting: ", arr);
 
 function desendingOrder(arr) {
     for (let i = 0; i < arr.length; i++) {
@@ -19,7 +20,6 @@ function desendingOrder(arr) {
     }
 }
 
-console.log("Before sorting: ", arr);
 desendingOrder(arr);
 console.log("After sorting: ", arr);
 
