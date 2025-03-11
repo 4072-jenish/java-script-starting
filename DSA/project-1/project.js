@@ -1,5 +1,6 @@
 
 
+
 console.log(" Q1 WAP for array data sorting desending order using selection sort.");
 
 
@@ -133,12 +134,4 @@ function slice(a,b,c) {
 console.log("index = 1 to 3");
 
 slice(a ,1 ,3);
-
-
-/*
-(5) [1, 2, 3, 4, 5]
- After Push  (6) [1, 2, 3, 4, 5, 12]
- After Pop (5) [1, 2, 3, 4, 5]
- index = 1 to 3
- After slice : 2 3 4 
-*/
+console.log("index = 0 to 4");
