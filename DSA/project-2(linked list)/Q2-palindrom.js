@@ -36,24 +36,24 @@ class palindrom{
          console.log(arr);
      }
     
-paliindrom(){
-    let temp = this.head;
-    let arr = [];
-    while(temp){
-        arr.push(temp.data);
-        temp = temp.next;
-    }
-    let start = 0;
-    let end = arr.length-1;
-    while(start<end){
-        if(arr[start] != arr[end]){
-            return false;
+     palindrome() {
+        let current = this.head;
+        let add = [];
+        while (current) {
+            add.push(current.data);
+            current = current.next;
         }
-        start++;
-        end--;
-    }
-    return true;
-}
+        let start = 0;
+        let end = add.length - 1;
+        while (start < end) {
+            if (add[start] !== add[end]) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }               
 
 }
 
@@ -66,5 +66,10 @@ Plist.apend(3);
 Plist.apend(2);
 Plist.apend(1);
 
-Plist.paliindrom();
 Plist.display();
+console.log(Plist.palindrome());
+
+/*Q2 check the Likedlist is palindrom or not .
+  1 2 3 2 1 
+  true
+*/

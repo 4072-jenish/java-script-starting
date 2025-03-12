@@ -24,6 +24,43 @@ class Linkedlist{
         currnt.next = newNode;
     }
 
+
+
+
+    splice(index,deletecount, ...data){
+        console.log("Q2");
+        if(index < 0 || index > this.length){
+            return;
+        }
+        if(data.length == 0 && deletecount >= 0){
+            this.delete(index);
+            return;
+        }
+        if(index == 0){
+            this.head = this.head.next;
+            return;
+        }
+        let currnt = this.head;
+        let count = 0;
+        while(currnt != null){
+            if(count == index - 1){
+                let temp = currnt.next;
+                for(let i = 0; i < data.length; i++){
+                    let newNode = new Node(data[i]);
+                    newNode.next = temp;
+                    currnt.next = newNode;
+                    temp = newNode;
+                }
+                break;
+            }
+            currnt = currnt.next;
+            count++;
+        }
+        
+
+
+    }
+
     display(){
         let currnt = this.head;
         let arr =[];
@@ -65,6 +102,8 @@ list.display();
 list.reverslist();
 list.display();
 
+list.splice(4,1, 99, 88, 77);
+list.display();
 
 /*
 Q1 : wap to revers a linked list .
