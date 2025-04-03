@@ -107,26 +107,31 @@ q1.display();
 
 
 
-console.log("Q3 write a program check first string swap can make strings equal.");
 
-function checkstring(string1 , string2){
-    if(string1.length != string2.length){
-        return false;
-    }
-    
-    for (let i = 0; i < string1.length; i++) {
-        for (let j = 0; j < string2.length; j++) {
-            if(string1[i] == string2[j]){
-                return true;
-            }else{
-                return false;
-            }
+console.log("Question No. 03 write a program check first string swap can make strings equal")
+let areAlmostEqual = function(s1, s2) {
+    if (s1 === s2){
+        return true;
+    } 
+   let result = [];
+
+   for (let i = 0; i < s1.length; i++) {
+       if (s1[i] !== s2[i]){
+           result.push(i);
+       } 
         
-        }
+       if (result.length > 2){
+           return false;
+       } 
+   }
+   return result.length === 2 
+};
 
-    }
+let s1 = "bank";
+let s2 = "kanb";
 
-}
+console.log(areAlmostEqual(s1, s2))
 
-console.log(checkstring("jenish" , "hsinej"));
+// output =  true
+
 
