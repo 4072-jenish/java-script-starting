@@ -103,7 +103,13 @@ list.display();
 
 list.deleteNode(10);
 list.display(); 
-list.deleteNode(99); 
+
+/*
+Q1 WAP to implements Create singly Linked list, adding a new Elements, and Delete node from singly linked list (Without any pre-defined function
+    Linked List: 10 -> 20 -> 30 -> 40 -> null
+    Linked List: 10 -> 30 -> 40 -> null
+    Linked List: 30 -> 40 -> null
+*/
 
 
 
@@ -126,6 +132,13 @@ for(let i = 0; i < arr.length; i++){
     }   
 }
 console.log("Sorted Array:",arr); 
+/*
+Q2 WAP to implements Selection Sort using JavaScript DSA without any pre-defined function.
+    Unsorted Array: (9) [9, 8, 5, 7, 3, 4, 2, 1, 6]
+    Sorted Array: (9) [1, 2, 3, 4, 5, 6, 7, 8, 9]
+*/
+
+
 
 console.log("Q3 WAP to implement Stack using JavaScript DSA without any pre-defined function.");
 
@@ -172,6 +185,15 @@ stack.display();
 console.log( "peek element is :",stack.peek());
 console.log( "is stack empty?",stack.iEmpty());
 
+/*
+Q3 WAP to implement Stack using JavaScript DSA without any pre-defined function.
+     12345
+     1234
+     peek element is : 4
+     is stack empty? false
+     
+ */
+
 
 console.log("Q4 WAP to implement binary Search using JavaScript with DSA?");
 
@@ -198,6 +220,13 @@ while(low <= high){
         high = mid - 1;
     }
 }
+
+/*
+Q4 WAP to implement binary Search using JavaScript with DSA?
+     Array is : (13) [1, 2, 50, 80, 40, 3, 4, 8, 60, 97, 84, 63, 51]
+     Target is : 60
+     element found at index 8
+*/
 
 
 
@@ -264,4 +293,10 @@ mergeSort(ar, 0, arr.length - 1);
 console.log("Sorted Array:");
 console.log(ar); 
 
-
+/*
+Q5 WAP to implement Merge sort using JavaScript without any function?
+        Original Array:
+        (6) [5, 2, 9, 1, 3, 6]
+        Sorted Array:
+        (9) [undefined, undefined, undefined, 1, 2, 3, 5, 6, 9]
+*/
